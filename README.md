@@ -2,8 +2,8 @@
 
 This is a package of Matlab code to run simulations for the CTLN model introduced in the paper:
 
-Diversity of emergent dynamics in competitive threshold-linear networks.\\
-Katherine Morrison, Anda Degeratu, Vladimir Itskov, Carina Curto.\\
+Diversity of emergent dynamics in competitive threshold-linear networks.
+Katherine Morrison, Anda Degeratu, Vladimir Itskov, Carina Curto.
 Available at https://arxiv.org/abs/1605.04463
 
 This is a bare bones package to run simple simulations and make plots using the CTLN model. 
