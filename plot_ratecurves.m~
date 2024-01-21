@@ -10,6 +10,8 @@ function plot_ratecurves(X,time,colors,titlestr)
 
 n = size(X,2); % no. of neurons
 
+disp(time(end))
+
 if nargin < 3 || isempty(colors)
     colors = [0 .5 .7; .15 .6 0; .5 .5 .5; .8 .55 0; .8 0 0];
     if n > 5
@@ -21,39 +23,26 @@ if nargin<4 || isempty(titlestr)
     titlestr = '';
 end;
 
-
+disp(size(X))
 
 M = mean(X); % calculate mean of each column ?> to be used to determine which to label?
-
+disp(M)
+class(M)
 
 labels = {};
-incLines = zeros(1,n);
-h = gobjects(1,n);
-included = gobjects(0);
+incLines = NaN(
 for i=1:n
-    h(i) = plot(time,X(:,i),'-','color',colors(i,:),'LineWidth',1.5);
-%     disp(h(i))
+    plot(time,X(:,i),'-','color',colors(i,:),'LineWidth',1.5);
 %     labelpoints(time(i), X(i,i), i);
     if (M(i)>0.05)
         labels{i} = int2str(i);
-        incLines(i) = i;
+        incLines[i] = i;
     else
         labels{i}='--';
     end
     hold on
 end;
-% disp(h(1))
-% disp(incLines)
-% k = incLines;
-% class(k)
-% class(h)
-% size(k)
-% size(h)
-% included = h(k);
-% disp(included)
-% disp(incLines)
-% class(incLines)
-% disp(labels)
+disp(labels)
 legend(labels)
 
 xlabel('time')

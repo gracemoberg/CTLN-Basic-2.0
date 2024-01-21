@@ -66,11 +66,21 @@ end
 
 % plot nodes
 for i=1:n
+    lab = i;
     plot(x(i),y(i),'.','color',colors(i,:),'Markersize',30)
+    if i < n/4
+        labelpoints(x(i), y(i), lab, 'NE', 0.3);
+    elseif (i >= n/4) && (i < n/2)
+        labelpoints(x(i), y(i), lab, 'SE', 0.3);
+    elseif (i >= n/2) && (i < (3*n)/4)
+        labelpoints(x(i), y(i), lab, 'SW', 0.3);
+    else
+        labelpoints(x(i), y(i), lab, 'NW', 0.3);
+    end
     hold on;
 end
-labs = 1:n;
-text(x, y, labs)
+% labs = 1:n;
+% text(x, y, labs)
 
 % touch ups
 xlim([-1.2*r, 1.3*r]);

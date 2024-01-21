@@ -11,11 +11,10 @@
 % sA = [0 1 0 0; 1 0 0 0; 0 1 0 0; 1 0 1 0];
 % sA = make_clique(3);
 % sA = make_cycle(5);
+
 graphs = {};
-class(graphs)
 for i=1:3
    graphs{i} = zeros(5); % an independent set on 10 nodes
-   class(graphs) 
 end 
 sA = make_cyclic_union(graphs);
 % disp(sA)
@@ -34,7 +33,8 @@ d = 4; % delta value (default is 2*e = .5)
 theta = 1; % theta value
 
 % solve ODEs (solution is returned in "soln" struct)
-X0 = rand(n,1); % initial conditions!
+% X0 = rand(n,1); % initial conditions
+X0 = [0.9 0.01 0.01 0.01 0.01 0.01 0.7 0.01 0.01 0.01 0.01 0.8 0.01 0.01 0.01];
 disp(X0)
 % X0 = [.4; .4; .01; .4]
 soln = sA2soln(sA,T,X0,e,d,theta);
