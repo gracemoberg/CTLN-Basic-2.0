@@ -21,14 +21,14 @@ clear all
 % run('examples/CTLN_example_5_baby_chaos.m')         % Fig 3D
 % run('examples/CTLN_example_6_n9_coexistence.m')     % Fig 4
 % run('examples/CTLN_example_7_old_n7_sequence.m')    % Fig 5
- run('examples/CTLN_example_8_gaudi.m')              % Fig 6
+%  run('examples/CTLN_example_8_gaudi.m')              % Fig 6
 % run('examples/CTLN_example_9_7star_quasiperiodic.m') % Fig 7
 % run('examples/CTLN_example_10_n7_rhythm.m')         % Fig 8
 % run('examples/CTLN_example_11_gallop_trot.m')       % Fig 10
 % run('examples/CTLN_example_12_cell_assembly_chain.m') % Fig 11A
 % run('examples/CTLN_example_13_5star_chain.m')      % Fig 11B
 % run('examples/CTLN_example_14_quasiperiodic_3cycles.m') % Fig 12
-% run('examples/CTLN_example_15_phone_number.m')      % Fig 13
+run('examples/CTLN_example_15_phone_number.m')      % Fig 13
 
 
 % second, select the initial conditions X0.

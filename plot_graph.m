@@ -69,6 +69,8 @@ for i=1:n
     plot(x(i),y(i),'.','color',colors(i,:),'Markersize',30)
     hold on;
 end
+labs = 1:n;
+text(x, y, labs)
 
 % touch ups
 xlim([-1.2*r, 1.3*r]);
